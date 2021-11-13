@@ -12,7 +12,7 @@ int find_connection(int** breadboard, int bb_rows, int bb_cols, int* visited,
     If one is found, moves in either direction until matching resistor
     leg is found. If column has already been visited, continue loop, 
     otherwise set it to visited and call the function again with 
-    with the new column as the new starting point. */
+    the new column as the new starting point. */
     for(int i = 0; i < bb_rows; i++) {
         if((breadboard[i][start] > 0 ) &&\
         (check_direction(breadboard, bb_cols, i, start) == LEFT)) {
