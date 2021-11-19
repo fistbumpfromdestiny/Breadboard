@@ -14,7 +14,7 @@ int find_connection(int** breadboard, int bb_rows, int bb_cols, int* visited,
     otherwise set it to visited and call the function again with 
     the new column as the new starting point. */
     for(int i = 0; i < bb_rows; i++) {
-        if((breadboard[i][start] > 0 ) &&\
+        if((breadboard[i][start] > 0 ) &&
         (check_direction(breadboard, bb_cols, i, start) == LEFT)) {
             x = start-1;
             while(breadboard[i][x] != breadboard[i][start])
@@ -25,7 +25,7 @@ int find_connection(int** breadboard, int bb_rows, int bb_cols, int* visited,
             if(find_connection(breadboard, bb_rows, bb_cols, visited, x, end)) 
                 return 1;
         }
-        else if((breadboard[i][start] > 0 ) &&\
+        else if((breadboard[i][start] > 0 ) &&
         (check_direction(breadboard, bb_cols, i, start) == RIGHT)) { 
             x = start+1;
             while(breadboard[i][x] != breadboard[i][start])
